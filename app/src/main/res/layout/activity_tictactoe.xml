@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/btnGameBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="←"
+        android:textSize="24sp"
+        android:textColor="#E2E8F0"
+        style="?android:attr/borderlessButtonStyle" />
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="TIC TAC TOE"
+        android:textColor="#E2E8F0"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:gravity="center" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardScoreboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHeader"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#151E2E"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PLAYER X"
+                    android:textColor="#00D2FF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvScoreX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PLAYER O"
+                    android:textColor="#FF3B30"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvScoreO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/gridLayoutBoard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardScoreboard"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="#1E293B"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_0" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="4dp" android:textSize="36sp" android:textStyle="bold" app:backgroundTint="#0A0F1D" app:cornerRadius="12dp" android:textColor="#FFFFFF"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="4dp" android:textSize="36sp" android:textStyle="bold" app:backgroundTint="#0A0F1D" app:cornerRadius="12dp" android:textColor="#FFFFFF"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="4dp" android:textSize="36sp" android:textStyle="bold" app:backgroundTint="#0A0F1D" app:cornerRadius="12dp" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="4dp" android:textSize="36sp" android:textStyle="bold" app:backgroundTint="#0A0F1D" app:cornerRadius="12dp" android:textColor="#FFFFFF"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="4dp" android:textSize="36sp" android:textStyle="bold" app:backgroundTint="#0A0F1D" app:cornerRadius="12dp" android:textColor="#FFFFFF"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_5" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="4dp" android:textSize="36sp" android:textStyle="bold" app:backgroundTint="#0A0F1D" app:cornerRadius="12dp" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_6" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="4dp" android:textSize="36sp" android:textStyle="bold" app:backgroundTint="#0A0F1D" app:cornerRadius="12dp" android:textColor="#FFFFFF"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="4dp" android:textSize="36sp" android:textStyle="bold" app:backgroundTint="#0A0F1D" app:cornerRadius="12dp" android:textColor="#FFFFFF"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_8" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="4dp" android:textSize="36sp" android:textStyle="bold" app:backgroundTint="#0A0F1D" app:cornerRadius="12dp" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/gridLayoutBoard"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="32dp"
+        android:text="RESET GAME"
+        android:textColor="#0A0F1D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        app:backgroundTint="#00E676"
+        app:cornerRadius="16dp" />
+
+</RelativeLayout>

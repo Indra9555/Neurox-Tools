@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnSciBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="←"
+            android:textSize="24sp"
+            android:textColor="#E2E8F0"
+            style="?android:attr/borderlessButtonStyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="SCIENTIFIC CALC"
+            android:textColor="#E2E8F0"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#1E293B"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="bottom|end"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvSciExpression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#94A3B8"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tvSciResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#00D2FF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:shrinkColumns="*">
+
+        <TableRow android:layout_marginBottom="6dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciSin" android:text="sin" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciCos" android:text="cos" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciTan" android:text="tan" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciLog" android:text="log" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciLn" android:text="ln" />
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="6dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciPi" android:text="π" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciE" android:text="e" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciPower" android:text="^" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciSqrt" android:text="√" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciClear" android:text="C" android:textColor="#FF3B30"/>
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="6dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciBrackOpen" android:text="("  android:textColor="#00D2FF"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciBrackClose" android:text=")" android:textColor="#00D2FF"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciBackspace" android:text="⌫"  android:textColor="#94A3B8"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSciDivide"
+                android:text="/"
+                android:textColor="#00D2FF"
+                android:layout_span="2"/>
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="6dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSci7" android:text="7" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSci8" android:text="8" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSci9" android:text="9" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSciMultiply"
+                android:text="*"
+                android:textColor="#00D2FF"
+                android:layout_span="2"/>
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="6dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSci4" android:text="4" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSci5" android:text="5" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSci6" android:text="6" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSciMinus"
+                android:text="-"
+
+                android:textColor="#00D2FF"
+                android:layout_span="2"/>
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="6dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSci1" android:text="1" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSci2" android:text="2" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSci3" android:text="3" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSciPlus"
+                android:text="+"
+                android:textColor="#00D2FF"
+                android:layout_span="2"/>
+        </TableRow>
+
+        <TableRow>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSci0" android:text="0" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSciDot" android:text="." />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSciEqual"
+                android:text="="
+
+                android:layout_span="3"
+                app:backgroundTint="#00D2FF"
+                android:textColor="#0A0F1D"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

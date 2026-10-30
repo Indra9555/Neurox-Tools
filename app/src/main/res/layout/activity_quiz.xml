@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:padding="20dp">
+
+  <LinearLayout
+      android:id="@+id/panelQuizGame"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/z"
+      android:orientation="vertical"
+      android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp">
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnQuizBack"
+          style="@style/Widget.MaterialComponents.Button.TextButton"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:layout_alignParentStart="true"
+          android:layout_centerVertical="true"
+          android:text="←"
+          android:textColor="#FFFFFF"
+          android:textSize="22sp"
+          app:paddingEnd="0dp"
+          app:paddingStart="0dp" />
+
+      <TextView
+          android:id="@+id/tvQuizHeaderTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginStart="8dp"
+          android:layout_toEndOf="@id/btnQuizBack"
+          android:text="QUIZ"
+          android:textColor="#E2E8F0"
+          android:textSize="18sp"
+          android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/tvQuestionProgress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_centerVertical="true"
+          android:text="Question 1/5"
+          android:textColor="#00D2FF"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        app:cardBackgroundColor="#1E293B"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="#334155"
+        app:strokeWidth="1dp">
+
+      <TextView
+          android:id="@+id/tvQuestionText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:lineSpacingMultiplier="1.2"
+          android:padding="24dp"
+          android:text="Loading system question variables metrics..."
+          android:textColor="#E2E8F0"
+          android:textSize="20sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOptionA"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="start|center_vertical"
+        android:text="Option A"
+        android:textColor="#E2E8F0"
+        android:textSize="15sp"
+        app:backgroundTint="#1E293B"
+        app:cornerRadius="12dp"
+        app:paddingStart="20dp"
+        app:strokeColor="#334155"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOptionB"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="start|center_vertical"
+        android:text="Option B"
+        android:textColor="#E2E8F0"
+        android:textSize="15sp"
+        app:backgroundTint="#1E293B"
+        app:cornerRadius="12dp"
+        app:paddingStart="20dp"
+        app:strokeColor="#334155"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOptionC"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="start|center_vertical"
+        android:text="Option C"
+        android:textColor="#E2E8F0"
+        android:textSize="15sp"
+        app:backgroundTint="#1E293B"
+        app:cornerRadius="12dp"
+        app:paddingStart="20dp"
+        app:strokeColor="#334155"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOptionD"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="start|center_vertical"
+        android:text="Option D"
+        android:textColor="#E2E8F0"
+        android:textSize="15sp"
+        app:backgroundTint="#1E293B"
+        app:cornerRadius="12dp"
+        app:paddingStart="20dp"
+        app:strokeColor="#334155"
+        app:strokeWidth="1dp" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/panelQuizScore"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:orientation="vertical"
+      android:gravity="center"
+      android:visibility="gone">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUIZ COMPLETED"
+        android:textColor="#00D2FF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        app:cardCornerRadius="110dp"
+        app:cardBackgroundColor="#1E293B"
+        app:strokeColor="#00D2FF"
+        app:strokeWidth="2dp"
+        android:layout_marginBottom="40dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFinalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:textColor="#FFFFFF"
+            android:textSize="44sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Score"
+            android:textColor="#64748B"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRestartQuiz"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="12dp"
+        android:text="RETRY QUIZ"
+        android:textColor="#0A0F1D"
+        android:textStyle="bold"
+        app:backgroundTint="#00D2FF"
+        app:cornerRadius="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnExitToHub"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:text="MAIN MENU"
+        android:textColor="#E2E8F0"
+        app:strokeColor="#334155"
+        app:cornerRadius="12dp"/>
+  </LinearLayout>
+
+</RelativeLayout>

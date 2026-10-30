@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnGameBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="←"
+        android:textSize="24sp"
+        android:textColor="#E2E8F0"
+        style="?android:attr/borderlessButtonStyle" />
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:text="SYSTEM SERVICES"
+        android:textColor="#E2E8F0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvHeader"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/z">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:text="Bluetooth"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@android:color/system_inverse_primary_light"
+                app:cornerRadius="12dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTorch"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:text="Torch"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@android:color/system_inverse_primary_light"
+                app:cornerRadius="12dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWifi"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:text="Wi-Fi"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@android:color/system_on_primary_container_dark"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCall"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:text="Call"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@android:color/system_inverse_primary_light"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCompass"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:text="Compass"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@android:color/system_inverse_primary_light"
+                app:cornerRadius="12dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCamera"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:text="Camera"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@android:color/system_inverse_primary_light"
+                app:cornerRadius="12dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVibrator"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="16dp"
+                android:text="Vibrate"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@android:color/system_inverse_primary_light"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
